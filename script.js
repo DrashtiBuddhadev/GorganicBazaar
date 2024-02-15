@@ -18,7 +18,7 @@ window.onscroll=()=>{
         header.classList.remove("active");
     }
 }
-let countDate=new Date('February 14,2024 00:00:00').getTime();
+let countDate=new Date('March 1,2024 00:00:00').getTime();
 
 function countDown(){
     let now=new Date().getTime();
