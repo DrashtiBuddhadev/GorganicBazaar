@@ -750,6 +750,7 @@ a{
     }
 
     .contact-form .form-img {
+        order: -1; /* Ensure the image appears above the form */
         text-align: center;
         margin-bottom: 2rem;
         width: 100%; /* Full width for image container */
@@ -782,4 +783,5 @@ a{
         padding: 0 1.5rem; /* Add some padding for smaller screens */
     }
 }
+
 
