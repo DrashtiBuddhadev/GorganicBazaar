@@ -620,7 +620,6 @@ a{
 
 
   
-
 @media(max-width:1200px) {
     html{
         font-size: 55%;
@@ -632,13 +631,36 @@ a{
     } 
     .section{
         padding: 2rem;
-    } 
+    }
 }
 @media(max-width:768px) {
     #menubar{
         display: initial;
     }
-    .header2 .navbar{
+
+    .header1 {
+        flex-direction: column; /* Stack logo and search bar vertically */
+        align-items: center;
+    }
+
+    .header1 .search-box-container {
+        width: 100%; /* Make search box container full width */
+        flex-direction: column; /* Stack search bar and icon vertically */
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .header1 .search-box-container #search-box {
+        width: 100%; /* Make the search input full width */
+        margin-bottom: 0.5rem; /* Add margin between input and search icon */
+    }
+
+    .header1 .search-box-container label {
+        width: 100%; /* Make the label (icon) full width */
+        text-align: center; /* Center the search icon */
+    }
+
+    .header2 .navbar {
         position: absolute;
         top: 100%;
         left: 0;
@@ -647,10 +669,12 @@ a{
         padding:1rem 1.5rem;
         display: none;
     }
-    .header2 .navbar.active{
+
+    .header2 .navbar.active {
         display: initial;
     }
-    .header2 .navbar a{
+
+    .header2 .navbar a {
         font-size: 2.3rem;
         display: block;
         text-align: center;
@@ -658,65 +682,67 @@ a{
         padding: 1rem;
         margin: 1.5rem 0;
     }
-    .home .content{
-        text-align: center;
-    }
-    .home .content h3{
-        font-size: 4rem;
-    }
-    .newsletter h3{
-        font-size: 2rem;
-    }
-}
-@media(max-width:450px) {
-    html{
-        font-size: 50%;
-    }  
-    .heading{
-        font-size: 2rem;
-    }
-    .header1{
-        flex-flow: column;
-    }
-    .header1 .search-box-container{
-        width: 100%;
-        margin-top: 2rem;
-    }
-}
-/* Additional responsiveness adjustments */
-
-/* Make header elements fit properly on smaller screens */
-@media(max-width:768px) {
-    .header1 .search-box-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .header1 .search-box-container #search-box {
-        width: 100%;
-    }
 
     .header2 .icons {
         margin-top: 1rem;
     }
 
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
+    .newsletter h3 {
+        font-size: 2rem;
+    }
+
     .banner-container .banner img {
-        width: 100%; /* Ensure banners adjust to the screen width */
+        width: 100%;
         height: auto; /* Maintain aspect ratio */
     }
 
-    .deal .image-container1 img, .deal .image-container2 img {
+    .deal .image-container1 img,
+    .deal .image-container2 img {
         width: 100%;
-        height: auto;
+        height: auto; /* Adjust images in the deal section */
     }
 
     .product .box-container .box {
-        flex: 1 1 100%; /* Make product boxes stack vertically */
+        flex: 1 1 100%; /* Stack product boxes vertically */
     }
 }
 
-/* Further adjustments for mobile devices */
 @media(max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+
+    .header1 {
+        flex-flow: column; /* Stack logo and search bar */
+    }
+
+    .header1 .search-box-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .header1 .search-box-container #search-box {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem; /* Reduce padding for better fit on small screens */
+    }
+
+    .header1 .search-box-container label {
+        font-size: 1.8rem; /* Adjust icon size for smaller screens */
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
     .home .image img {
         width: 100%;
         height: auto;
@@ -726,62 +752,16 @@ a{
         width: 100%;
         height: auto;
     }
+}
 
-    /* .contact-form {
-        flex-direction: column;
+/* Additional responsiveness adjustments for smaller devices */
+@media(max-width:450px) {
+    .home .content h3 {
+        font-size: 3.5rem;
     }
 
-    .form-img img {
+    .category .box-container .box img {
         width: 100%;
         height: auto;
-    } */
-}
-
-/* Adjusting contact form for full width on smaller screens */
-@media(max-width:768px) {
-    .contact-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-form .main {
-        flex-direction: column; /* Stack the image and form vertically */
-        align-items: center;
-    }
-
-    .contact-form .form-img {
-        order: -1; /* Ensure the image appears above the form */
-        text-align: center;
-        margin-bottom: 2rem;
-        width: 100%; /* Full width for image container */
-    }
-
-    .contact-form .form-img img {
-        width: 50%; /* Center and resize image */
-        height: auto;
-    }
-
-    .contact-form .content-info {
-        width: 100%; /* Make form take full width */
-        max-width: 600px; /* Set a max width to avoid stretching too much */
-    }
-
-    .contact-form input[type="text"],
-    .contact-form input[type="email"],
-    .contact-form textarea {
-        width: 100%; /* Full width for input fields */
     }
 }
-
-@media(max-width:450px) {
-    .contact-form .form-img img {
-        width: 70%; /* Adjust image size for smaller screens */
-    }
-
-    .contact-form .content-info {
-        width: 100%; /* Ensure form stays full width */
-        padding: 0 1.5rem; /* Add some padding for smaller screens */
-    }
-}
-
-
