@@ -727,12 +727,59 @@ a{
         height: auto;
     }
 
-    .contact-form {
+    /* .contact-form {
         flex-direction: column;
     }
 
     .form-img img {
         width: 100%;
         height: auto;
+    } */
+}
+
+/* Adjusting contact form for full width on smaller screens */
+@media(max-width:768px) {
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form .main {
+        flex-direction: column; /* Stack the image and form vertically */
+        align-items: center;
+    }
+
+    .contact-form .form-img {
+        text-align: center;
+        margin-bottom: 2rem;
+        width: 100%; /* Full width for image container */
+    }
+
+    .contact-form .form-img img {
+        width: 50%; /* Center and resize image */
+        height: auto;
+    }
+
+    .contact-form .content-info {
+        width: 100%; /* Make form take full width */
+        max-width: 600px; /* Set a max width to avoid stretching too much */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%; /* Full width for input fields */
     }
 }
+
+@media(max-width:450px) {
+    .contact-form .form-img img {
+        width: 70%; /* Adjust image size for smaller screens */
+    }
+
+    .contact-form .content-info {
+        width: 100%; /* Ensure form stays full width */
+        padding: 0 1.5rem; /* Add some padding for smaller screens */
+    }
+}
+
